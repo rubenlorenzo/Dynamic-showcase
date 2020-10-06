@@ -1,0 +1,24 @@
+#container{
+    display: flex;
+}
+
+#products{
+    width: 80%;
+}
+
+#shopping_cart{
+    width: 20%;
+    height: 20em;
+}
+
+#basket{
+    border: 2px solid black;
+    height: 100%;
+}
+
+#total{
+    padding: 1em;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
