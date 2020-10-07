@@ -4,21 +4,42 @@
 
 #products{
     width: 80%;
+    height: 60%;
+}
+
+section > div{
+    display: flex;
+    flex-wrap: wrap ;
+    width: 100%;
+    height: 50%;
+}
+article{
+    background-color: cornflowerblue;
+    margin: 1em;
+    width: 20%;
+    border-radius: 0.5em;
+}
+
+article > img{
+    width: 100%;
+    padding: 2em 0em 2em 0em;
 }
 
 #shopping_cart{
+    margin-top: 25.8em;
     width: 20%;
     height: 20em;
 }
 
 #basket{
-    border: 2px solid black;
+    margin-top: 2.2em ;
+    background-color: darkturquoise;
     height: 100%;
+    border-radius: 0.5em 0.5em 0em 0em;
 }
 
 #total{
     padding: 1em;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
+    border-radius: 0em 0em 0.5em 0.5em;
+    background-color: forestgreen;
 }
