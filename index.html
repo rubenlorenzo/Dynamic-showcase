@@ -13,7 +13,7 @@
                 <header>
                     <h2>Frutas</h2>
                 </header>
-                <div>
+                <div class="shelf">
                     <article id="product1" draggable="true" ondragstart="drag(event)">
                         <img src="./img/fruit_apple.png" alt="" srcset="" draggable="false">
                         <div class="price">1.19€</div>
@@ -54,7 +54,7 @@
                 <header>
                     <h2>Otros Alimentos</h2>
                 </header>
-                <div>
+                <div class="shelf">
                     <article id="product9" draggable="true" ondragstart="drag(event)">
                         <img src="./img/coffee.png" alt="" srcset="" draggable="false">
                         <div class="price">1.70€</div>
@@ -81,7 +81,7 @@
             </header>
 
             <div id="basket" ondrop="drop(event)" ondragover="allowDrop(event)">
-
+                <span id="info" disabled>Arrastra aquí</span>
             </div>
 
             <div id="total">
