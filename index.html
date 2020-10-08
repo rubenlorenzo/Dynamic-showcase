@@ -14,36 +14,36 @@
                     <h2>Frutas</h2>
                 </header>
                 <div>
-                    <article id="product1">
-                        <img src="./img/fruit_apple.png" alt="" srcset="">
+                    <article id="product1" draggable="true" ondragstart="drag(event)">
+                        <img src="./img/fruit_apple.png" alt="" srcset="" draggable="false">
                         <div class="price">1.19€</div>
                     </article>
-                    <article id="product2">
-                        <img src="./img/fruit_banna.png" alt="" srcset="">
+                    <article id="product2" draggable="true" ondragstart="drag(event)">
+                        <img src="./img/fruit_banna.png" alt="" srcset="" draggable="false">
                         <div class="price">2.05€</div>
                     </article>
-                    <article id="product3">
-                        <img src="./img/fruit_grapes.png" alt="" srcset="">
+                    <article id="product3" draggable="true" ondragstart="drag(event)">
+                        <img src="./img/fruit_grapes.png" alt="" srcset="" draggable="false">
                         <div class="price">2.04€</div>
                     </article>
-                    <article id="product4"> 
-                        <img src="./img/fruit_lemon.png" alt="" srcset="">
+                    <article id="product4" draggable="true" ondragstart="drag(event)"> 
+                        <img src="./img/fruit_lemon.png" alt="" srcset="" draggable="false">
                         <div class="price">1.55€</div>
                     </article>
-                    <article id="product5">
-                        <img src="./img/fruit_orange.png" alt="" srcset="">
+                    <article id="product5" draggable="true" ondragstart="drag(event)">
+                        <img src="./img/fruit_orange.png" alt="" srcset="" draggable="false">
                         <div class="price">2.30€</div>
                     </article>
-                    <article id="product6">
-                        <img src="./img/fruit_pear.png" alt="" srcset="">
+                    <article id="product6" draggable="true" ondragstart="drag(event)">
+                        <img src="./img/fruit_pear.png" alt="" srcset="" draggable="false">
                         <div class="price">1.70€</div>
                     </article>
-                    <article id="product7">
-                        <img src="./img/fruit_strawberry.png" alt="" srcset="">
+                    <article id="product7" draggable="true" ondragstart="drag(event)">
+                        <img src="./img/fruit_strawberry.png" alt="" srcset="" draggable="false">
                         <div class="price">3.10€</div>
                     </article>
-                    <article id="product8">
-                        <img src="./img/fruit_watermelon.png" alt="" srcset="">
+                    <article id="product8" draggable="true" ondragstart="drag(event)">
+                        <img src="./img/fruit_watermelon.png" alt="" srcset="" draggable="false">
                         <div class="price">2.60€</div>
                     </article>
                 </div>
@@ -55,20 +55,20 @@
                     <h2>Otros Alimentos</h2>
                 </header>
                 <div>
-                    <article id="product9">
-                        <img src="./img/coffee.png" alt="" srcset="">
+                    <article id="product9" draggable="true" ondragstart="drag(event)">
+                        <img src="./img/coffee.png" alt="" srcset="" draggable="false">
                         <div class="price">1.70€</div>
                     </article>
-                    <article id="product10">
-                        <img src="./img/milk.png" alt="" srcset="">
+                    <article id="product10" draggable="true" ondragstart="drag(event)">
+                        <img src="./img/milk.png" alt="" srcset="" draggable="false">
                         <div class="price">0.90€</div>
                     </article>
-                    <article id="product11">
-                        <img src="./img/refreshment.png" alt="" srcset="">
+                    <article id="product11" draggable="true" ondragstart="drag(event)">
+                        <img src="./img/refreshment.png" alt="" srcset="" draggable="false">
                         <div class="price">1.00€</div>
                     </article>
-                    <article id="product12">
-                        <img src="./img/wine.png" alt="" srcset="">
+                    <article id="product12" draggable="true" ondragstart="drag(event)">
+                        <img src="./img/wine.png" alt="" srcset="" draggable="false">
                         <div class="price">2.60€</div>
                     </article>
                 </div>
@@ -80,7 +80,7 @@
                 <h2>Carrito</h2>
             </header>
 
-            <div id="basket">
+            <div id="basket" ondrop="drop(event)" ondragover="allowDrop(event)">
 
             </div>
 
@@ -89,5 +89,7 @@
             </div>    
         </aside>    
     </div>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>
