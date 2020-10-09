@@ -103,3 +103,11 @@ h2{
     border-top: 0px;
     font-weight: bold;
 }
+
+#total > #calc{
+    margin-left: 1em;
+}
+
+#total > #coin{
+    display: none;
+}
