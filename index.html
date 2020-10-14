@@ -13,64 +13,19 @@
                 <header>
                     <h2>Frutas</h2>
                 </header>
-                <div>
-                    <article>
-                        <img src="./img/fruit_apple.png" alt="" srcset="">
-                        <div class="price">1.19€</div>
-                    </article>
-                    <article>
-                        <img src="./img/fruit_banna.png" alt="" srcset="">
-                        <div class="price">2.05€</div>
-                    </article>
-                    <article>
-                        <img src="./img/fruit_grapes.png" alt="" srcset="">
-                        <div class="price">2.04€</div>
-                    </article>
-                    <article>
-                        <img src="./img/fruit_lemon.png" alt="" srcset="">
-                        <div class="price">1.55€</div>
-                    </article>
-                    <article>
-                        <img src="./img/fruit_orange.png" alt="" srcset="">
-                        <div class="price">2.30€</div>
-                    </article>
-                    <article>
-                        <img src="./img/fruit_pear.png" alt="" srcset="">
-                        <div class="price">1.70€</div>
-                    </article>
-                    <article>
-                        <img src="./img/fruit_strawberry.png" alt="" srcset="">
-                        <div class="price">3.10€</div>
-                    </article>
-                    <article>
-                        <img src="./img/fruit_watermelon.png" alt="" srcset="">
-                        <div class="price">2.60€</div>
-                    </article>
-                </div>
                 
+                <div class="shelf" id="fruits">
+  
+                </div>                
             </section>
 
             <section>
                 <header>
                     <h2>Otros Alimentos</h2>
                 </header>
-                <div>
-                    <article>
-                        <img src="./img/coffee.png" alt="" srcset="">
-                        <div class="price">1.70€</div>
-                    </article>
-                    <article>
-                        <img src="./img/milk.png" alt="" srcset="">
-                        <div class="price">0.90€</div>
-                    </article>
-                    <article>
-                        <img src="./img/refreshment.png" alt="" srcset="">
-                        <div class="price">1.00€</div>
-                    </article>
-                    <article>
-                        <img src="./img/wine.png" alt="" srcset="">
-                        <div class="price">2.60€</div>
-                    </article>
+                
+                <div class="shelf" id="othersFood">
+
                 </div>
             </section>
         </div>
@@ -80,14 +35,17 @@
                 <h2>Carrito</h2>
             </header>
 
-            <div id="basket">
-
+            <div id="basket" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <span id="info" disabled>Arrastra aquí</span>
             </div>
 
             <div id="total">
-                Total:<span id="calc"></span>
+                Total:<span id="calc"></span><span id="coin">€</span>
             </div>    
         </aside>    
     </div>
+
+    <script src="./js/main.js"></script>
+    <script type="module" src="./js/products.js"></script>
 </body>
 </html>

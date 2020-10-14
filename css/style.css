@@ -27,7 +27,7 @@ h2{
     text-align: center;
 }
 
-article{
+.shelf >article{
     background-color: #42a5f5;
     margin: 1em;
     width: 20%;
@@ -35,12 +35,12 @@ article{
     border-radius: 0.5em;
 }
 
-article > img{
+.shelf > article > img{
     width: 100%;
     padding: 1.8em 0em 0.8em 0em;
 }
 
-article > .price{
+.shelf > article > .price{
     text-align: center;
     margin: 0.5em 3em 0.5em 3em;
     padding-top: 0.2em;
@@ -59,10 +59,40 @@ article > .price{
 
 #basket{
     margin-top: 1.3em ;
+    justify-items: flex-end;
     background-color: #4dd0e1;
-    height: 100%;
+    min-height: 100%;
     border-radius: 0.5em 0.5em 0em 0em;
-    border: 1.8px solid #9e9e9e;
+    border: 1.8px solid #9e9e9e;     
+}
+
+#basket > article{
+    display: flex;
+    flex-wrap: wrap ;
+    width: 93%;
+    height: 3.8em;
+    background-color:  #42a5f5;
+    margin: 0.5em;
+    border-radius: 0.2em;
+    padding: 0.4em 0em 0.2em 0em;
+}
+
+#basket > article > img{
+    height: 3.5em;
+
+}
+#basket > article > .price{
+    align-self: right;
+    margin-left: auto;
+    padding: 9% 1em 0em 0em;
+}
+
+#basket > #info{
+    position: relative;
+    top: 1em;
+    left: 28%;
+    color: #777777;
+    align-self: start;
 }
 
 #total{
@@ -72,4 +102,12 @@ article > .price{
     border: 1.8px solid #9e9e9e;
     border-top: 0px;
     font-weight: bold;
+}
+
+#total > #calc{
+    margin-left: 1em;
+}
+
+#total > #coin{
+    display: none;
 }
