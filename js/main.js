@@ -81,6 +81,11 @@ function collapseBasket(product){
         buttonShowAll.addEventListener("click", showAllProductsInBasket);
 
         basket.appendChild(buttonShowAll);
+        document.querySelector('#button_show_all').style.display="none";
+    }
+
+    if(productsShow == 7 ){
+        document.querySelector('#button_show_all').style.display="";
     }
 
     if(document.querySelectorAll('#basket .nohidden').length>0){
