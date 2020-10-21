@@ -83,7 +83,7 @@ h2{
 }
 #basket > article > .price{
     align-self: right;
-    margin-left: auto;
+    /*margin-left: auto;*/
     padding: 9% 1em 0em 0em;
 }
 
@@ -93,6 +93,24 @@ h2{
     left: 28%;
     color: #777777;
     align-self: start;
+}
+
+#basket > article > .product_repeat{
+    align-self: right;
+    margin-left: auto;
+    padding: 1.25em 0.5em 0px 0px;
+}
+
+#button_show_all{
+    position: relative;
+    left: 45%;
+    top: -0.4em;
+    font-weight: bold;
+}
+
+#button_show_all:hover{
+    color: #777777;
+    cursor: pointer;
 }
 
 #total{

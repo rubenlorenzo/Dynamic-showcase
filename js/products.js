@@ -7,7 +7,7 @@ const productsTemplate = (products, shelfText) =>  {
     products.forEach(product => {
         
         let onlyProductString = 
-        `<article id='${product.id}' draggable='true' ondragstart='drag(event)'>
+        `<article id='${product.id}' class='product' draggable='true' ondragstart='drag(event)'>
             <img src='${product.img}' alt='${product.imgText}' srcset='' draggable='false'>
             <div class='price'>${product.price}€</div>
         </article>`
