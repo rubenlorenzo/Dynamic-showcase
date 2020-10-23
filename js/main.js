@@ -23,7 +23,13 @@ function drop(event) {
     
     let basket = document.getElementById("basket");
     basket.appendChild(product);
-
+    
+    let buttonDeleteProduct = document.createElement("span");
+    buttonDeleteProduct.className="btn-delete";
+    buttonDeleteProduct.innerHTML = "<i class='fa fa-minus-square-o' aria-hidden='true'></i>";
+    console.log(product.childNodes);
+    product.insertBefore(buttonDeleteProduct, product.children[1])
+    
     productsRepeat(product);
 
     collapseBasket(product,basket);  
@@ -41,7 +47,7 @@ let productRepeat = [];
 function productsRepeat(product){
     let productRepeatNode = document.createElement("span");
     productRepeatNode.className = "product_repeat";
-    product.insertBefore(productRepeatNode, product.children[1]);
+    product.insertBefore(productRepeatNode, product.children[2]);
     productRepeat.push(1);    
         
     let productsInBasket = document.querySelectorAll("#basket .product");
@@ -53,7 +59,7 @@ function productsRepeat(product){
             product.classList.add("no-show");
             productRepeat[i]++;           
             let nodesInArticle = productsInBasket[i].childNodes;            
-            nodesInArticle[3].innerText = productRepeat[i]+" x";   
+            nodesInArticle[4].innerText = productRepeat[i]+" x";   
         }
     }
 }
@@ -108,3 +114,4 @@ function showAllProductsInBasket(){
     }
     
 }
+

@@ -75,6 +75,11 @@ h2{
     margin: 0.5em;
     border-radius: 0.2em;
     padding: 0.4em 0em 0.2em 0em;
+    border: 2px solid  #42a5f5;
+}
+
+#basket > article:hover{
+    border: 2px solid  #6a8399;
 }
 
 #basket > article > img{
@@ -83,7 +88,6 @@ h2{
 }
 #basket > article > .price{
     align-self: right;
-    /*margin-left: auto;*/
     padding: 9% 1em 0em 0em;
 }
 
@@ -99,6 +103,26 @@ h2{
     align-self: right;
     margin-left: auto;
     padding: 1.25em 0.5em 0px 0px;
+}
+
+#basket > article > .btn-delete{  
+    color:#42a5f5;  
+    width: 0em;
+    height: 0em;    
+}
+
+#basket > article:hover .btn-delete{
+    width: 0.5em;
+    height: 0.5em;
+    color:  #6a8399;
+    margin-top: 0.7em;
+    margin-left: -0.2em;
+    font-size: 1.6em;
+}
+
+#basket > article:hover .btn-delete > i:hover{
+    color:  #946161;
+    cursor: pointer;
 }
 
 #button_show_all{
