@@ -26,8 +26,7 @@ function drop(event) {
     
     let buttonDeleteProduct = document.createElement("span");
     buttonDeleteProduct.className="btn-delete";
-    buttonDeleteProduct.innerHTML = "<i class='fa fa-minus-square-o' aria-hidden='true'></i>";
-    console.log(product.childNodes);
+    buttonDeleteProduct.innerHTML = `<i class="fa fa-minus-square-o" aria-hidden="true" onclick="deleteProduct('${product.id}')"></i>`;
     product.insertBefore(buttonDeleteProduct, product.children[1])
     
     productsRepeat(product);
@@ -113,5 +112,20 @@ function showAllProductsInBasket(){
         });
     }
     
+}
+
+function deleteProduct(productId){
+    let productsSelect = document.querySelectorAll("#basket > #"+productId);
+    let numProduct = productsSelect.length-1;    
+    productsSelect[numProduct].remove();
+
+    if(numProduct>0){
+        if(numProduct==1){
+            productsSelect[0].childNodes[4].innerText=""
+        }else{
+            productsSelect[0].childNodes[4].innerText=numProduct+" x"
+        }
+        productRepeat.shift()  
+    }
 }
 
