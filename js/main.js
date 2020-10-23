@@ -126,7 +126,15 @@ function deleteProduct(productId){
     if(productsShow < 7 && document.querySelector('#button_show_all')){
         document.querySelector('#button_show_all').remove();
     }
-    
+
+    let productsInBasket = document.querySelectorAll('#basket .product').length;
+    if(productsInBasket == 0){
+        document.getElementById("info").style.display="";
+        document.getElementById("calc").style.display="none";
+        document.getElementById("coin").style.display="none";
+        countProducts=0;
+    }
+
     if(numProduct>0){
         if(numProduct==1){
             productsSelect[0].childNodes[4].innerText=""
