@@ -119,6 +119,15 @@ function deleteProduct(productId){
     let numProduct = productsSelect.length-1;    
     productsSelect[numProduct].remove();
 
+    if(numProduct>0){
+        if(numProduct==1){
+            productsSelect[0].childNodes[4].innerText=""
+        }else{
+            productsSelect[0].childNodes[4].innerText=numProduct+" x"
+        }
+        productRepeat.shift()  
+    }
+    
     priceProduct = productsSelect[0].childNodes[5].innerText;    
     calcTotalPrice("-"+priceProduct);
 
@@ -133,15 +142,6 @@ function deleteProduct(productId){
         document.getElementById("calc").style.display="none";
         document.getElementById("coin").style.display="none";
         countProducts=0;
-    }
-
-    if(numProduct>0){
-        if(numProduct==1){
-            productsSelect[0].childNodes[4].innerText=""
-        }else{
-            productsSelect[0].childNodes[4].innerText=numProduct+" x"
-        }
-        productRepeat.shift()  
     }
 }
 
