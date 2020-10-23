@@ -13,7 +13,8 @@ function drop(event) {
     var data = event.dataTransfer.getData("text");
     let product = document.getElementById(data).cloneNode(true);
     
-    calcTotalPrice(data);
+    let price = document.querySelector("#"+data+" > .price").innerText;
+    calcTotalPrice(price);
 
     countProducts++;
     if(countProducts>0){
@@ -35,9 +36,8 @@ function drop(event) {
 }
 
 let totalPrice=0;
-function calcTotalPrice(data){
-    let price = document.querySelector("#"+data+" > div").innerText;
-    let priceNumber = Number(price.split("€")[0]);
+function calcTotalPrice(priceProduct){    
+    let priceNumber = Number(priceProduct.split("€")[0]);
     totalPrice= totalPrice+priceNumber;
     document.getElementById("calc").innerText = totalPrice.toFixed(2);
 }
@@ -118,6 +118,9 @@ function deleteProduct(productId){
     let productsSelect = document.querySelectorAll("#basket > #"+productId);
     let numProduct = productsSelect.length-1;    
     productsSelect[numProduct].remove();
+
+    priceProduct = productsSelect[0].childNodes[5].innerText;    
+    calcTotalPrice("-"+priceProduct);
 
     if(numProduct>0){
         if(numProduct==1){
