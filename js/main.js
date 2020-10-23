@@ -20,6 +20,7 @@ function drop(event) {
     if(countProducts>0){
         document.getElementById("info").style.display="none";
         document.getElementById("coin").style.display="inline";
+        document.getElementById("calc").style.display="inline";
     }
     
     let basket = document.getElementById("basket");
@@ -127,7 +128,7 @@ function deleteProduct(productId){
         }
         productRepeat.shift()  
     }
-    
+
     priceProduct = productsSelect[0].childNodes[5].innerText;    
     calcTotalPrice("-"+priceProduct);
 
