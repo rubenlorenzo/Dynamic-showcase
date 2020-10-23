@@ -64,7 +64,7 @@ function productsRepeat(product){
 }
 
 function collapseBasket(product){
-    let productsShow = document.querySelectorAll('#basket .product:not(.no-show)').length
+    let productsShow = document.querySelectorAll('#basket .product:not(.no-show)').length;
 
     if(productsShow>6){
         product.style.display = "none";
@@ -122,6 +122,11 @@ function deleteProduct(productId){
     priceProduct = productsSelect[0].childNodes[5].innerText;    
     calcTotalPrice("-"+priceProduct);
 
+    let productsShow = document.querySelectorAll('#basket .product:not(.no-show)').length;
+    if(productsShow < 7 && document.querySelector('#button_show_all')){
+        document.querySelector('#button_show_all').remove();
+    }
+    
     if(numProduct>0){
         if(numProduct==1){
             productsSelect[0].childNodes[4].innerText=""
