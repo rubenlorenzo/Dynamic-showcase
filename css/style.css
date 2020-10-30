@@ -127,9 +127,10 @@ h2{
 
 #button_show_all{
     position: relative;
-    left: 45%;
-    top: -0.4em;
+    top: -0.8em;
+    text-align: center;
     font-weight: bold;
+    /*padding-bottom: 0.7em;*/
 }
 
 #button_show_all:hover{
@@ -138,7 +139,7 @@ h2{
 }
 
 #total{
-    padding: 1em;
+    padding: 0.7em 1em 1em 1em;
     border-radius: 0em 0em 0.5em 0.5em;
     background-color: #1de9b6;
     border: 1.8px solid #9e9e9e;
